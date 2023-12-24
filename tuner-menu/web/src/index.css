@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  scrollbar-width: none;
+}
+
+#root {
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari */
+}
+
+.overflow-y-scroll {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 20;
+}
+
+/* fade in and out current color animation  */
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/* fade in and out current color animation  */
+@keyframes scale {
+  0% {
+    scale: 0.9;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.9;
+  }
+}
+
+.fade {
+  animation: fade 2s infinite;
+}
+
+.scale {
+  animation: scale 1.5s infinite;
+}
+
+
+.slider::-webkit-slider-thumb {
+  @apply w-4 h-4 bg-white border-0 rounded-full cursor-pointer appearance-none;
+}
+
+.slider::-moz-range-thumb {
+  @apply w-4 h-4 bg-white border-0 rounded-full cursor-pointer appearance-none;
+}
+
+.slider::-ms-thumb {
+  @apply w-4 h-4 bg-white border-0 rounded-full cursor-pointer appearance-none;
+}
+
+
+/* Optional: CSS for the surrounding text */
+.legend-text {
+  font-size: 0.8em; /* Reduced font size for the legend text */
+}
